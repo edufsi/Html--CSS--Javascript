@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var n1= Number.parseFloat(window.prompt('Digite um número:')) //força a conversão para Float
+    var n2 = Number.parseInt(window.prompt('Digite outro número:')) //força a conversão para Int
+    var n3 = Number(window.prompt('Mais um número')) //não força a conversão 
+    var soma = n1 + n2 + n3 //number + number + number = number
+
+    var string1 = String(n1)
+    var string2 = n2.toString()
+    var string3 = String(n3)
+    var concatenacao = string1 + string2 + string3 //string + string + string = string concatenada
+
+    window.alert(`O resultado da soma entre ${n1}, ${n2} e ${n3} foi ${soma} e o resultado da concatenação foi ${concatenacao}`)
+
+</script>
+</html>
