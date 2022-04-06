@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatações</title>
+</head>
+<body>
+    <h1>FORMATAÇÕES EM HTML</h1>
+    <h2>Foco em semântica, não em forma</h2>
+    <p>É importante destacar que a HTML não deve ser utilizada para mudar a forma de elementos, mas sim para adicionar sentidos, significados. Para alterar a forma, usamos CSS. Por exemplo, tags como &lt;u&gt; (muda texto para itálico), &lt;b&gt; (muda texto para negrito) e &lt;big&gt; (aumenta o tamanho do texto) já são obsoletas, pois elas não tem sentido (não são semânticas), apenas mudam formas, nesse caso de textos.</p>
+
+    <h2>Agora sim, formatações</h2>
+    
+    <h3>Termo em destaque usando negrito</h3>
+    <p>tag &lt;strong&gt;: Nessa frase, &lt;strong&gt;<strong>esse termo</strong>&lt;/strong&gt; tem mais força.</p> 
+    
+    <h3>Termo com ênfase usando itálico</h3>
+    <p>tag &lt;em&gt;: Nessa frase, &lt;em&gt;<em>esse termo</em>&lt;/em&gt; tem ênfase.</p>
+    
+    <h3>Texto em destaque com marcação</h3>
+    <p>Usando a tag MARK, podemos &lt;mark&gt;<mark>deixar um texto marcado</mark>&lt;/mark&gt;</p>
+    
+    <h3>Letras pequenas</h3>
+    <p>Usando a tag SMALL, podemos dar à uma parte de nosso texto um dado sentido ao deixá-la menor:
+    </p>
+    <p><small>Não leia as letras pequenas</small></p>
+    
+    <h3>Texto excluído/deletado</h3>
+    <p>Texto que deve ser lido, mas não considerado</p>
+    <p>Usamos a tag DEL para fazê-lo, &lt;del&gt;<del>assim</del>&lt;/del&gt;</p></p>
+    
+    <h3>Texto inserido</h3>
+    <p>Indicação de que aquele texto foi inserido (sublinhado)</p>
+    <p>Usamos a tag INS para fazê-lo, &lt;ins&gt;<ins>assim</ins>&lt;/ins&gt;</p></p>
+    
+    <h3>Texto sobrescrito</h3>
+    <p>Utilizamos a tag SUP para sobrescrever. Por exemplo: x&lt;sup&gt;<sup>20</sup>&lt;/sup&gt;=0</p>
+    
+    <h3>Texto subscrito</h3>
+    <p>Utilizamos a tag SUB para subscrever. Por exemplo: H&lt;sub&gt;<sub>2</sub>&lt;/sub&gt;O</p></p>
+
+    <h3>Código</h3>
+    <p>Para inserir um código através de uma fonte monoespaçada, use a tag CODE.</p>
+    <p>Exemplo:</p>
+    <pre> <!--Tudo que será colocado dentro da tag PRE será considerado, até tabulação e quebra de linhas.-->
+<code>
+def primo(num):
+    primo = True
+    for value in range (2, num):
+        if num % value == 0:
+            primo = False
+    if primo:
+        return 1
+    else: 
+        return int(0)
+    
+def quantos_primos(intervalo):
+    primos = 0
+    for num in range(intervalo):
+        primos += primo(num)
+    
+    
+</code>
+    </pre>
+    <h3>Citações</h3>
+    <p>Usamos a tag Q para citações simples e a tag BLOCKQUOTE para citações completas </p>
+    <p>Como diria Albert Einstein: <q>Nunca confie em citações que você vê na internet</q></p>
+    <p>Como diria Bauman:</p>
+    <blockquote cite="https://blog.imaginie.com.br/filosofo/">
+    As redes sociais são muito úteis, oferecem serviços muito prazerosos, mas são uma armadilha.
+
+    <h3>Abreviações</h3>
+    <p>Usamos a tag ABBR para abreviar e deixar o termo abreviado oculto</p>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+    
+    <h3>Invertido</h3>
+    <p>Vai saber por que isso existe, mas já que existe toma aí: pra inverter um texto, use a tag BDO, com dir=rtl (right to left)</p>
+    <p><bdo dir="rtl">Estou aprendendo HTML</bdo></p>
+    </blockquote>
+</body>
+</html>
