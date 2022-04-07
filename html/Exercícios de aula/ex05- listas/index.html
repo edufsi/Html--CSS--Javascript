@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <p>Listas ordenadas são, obviamente, aquelas que seguem uma ordem. Essa ordem pode ser por letras, números e números romanos. Fazemos uma lista ordena utilizando a <strong>tag OL </strong> (ordered list), com os elementos com a tag LI, que tem seu fechamento opcional</p>
+    <ol start=5 type="1"> <!--1, a, A, i, I -->
+        <li>Acordar</li>
+        <li>Tomar café</li>
+        <li>Ir para a escola</li>
+        <li>Almoçar</li>
+        <li>Estudar</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+        
+    </ol>
+
+    <h2>Listas não ordenadas</h2>
+    <p>Utilizam <strong>a tag UL</strong> (unordered list) e a tag LI para seus elementos</p>
+    <ul type="square"> <!--square, circle, disc-->
+        <li>Pão</li>
+        <li>Café</li>
+        <li>Margarina</li>
+        <li>Queijo</li>
+        <li>Alface</li>
+        <li>Tomate</li>
+        <li>Arroz</li>
+        <li>Azeite</li>
+        <li>Feijão</li>
+    </ul>
+    <h3>Um exemplo mais elaborado</h3>
+    <ol>
+        <li>Capítulo</li>
+        <ol type="a">
+            <li>Divisão do capítulo</li>
+            <ol type="i">
+                <li>Subdivisão do capítulo</li>
+                <li>Subdivisão do capítulo</li>
+            </ol>
+            <li>Divisão do capítulo</li>
+            <li>Divisão do capítulo</li>
+            <ol type="i">
+                <li>Subdivisão do capítulo</li>
+                <li>Subdivisão do capítulo</li>
+            </ol>
+            <li>Divisão do capítulo</li>
+            <li>Divisão do capítulo</li>
+        </ol>
+        <li>Capítulo</li>
+        <ol type="a">
+            <li>Divisão do capítulo</li>
+            <ol type="i">
+                <li>Subdivisão do capítulo</li>
+                <li>Subdivisão do capítulo</li>
+                <li>Subdivisão do capítulo</li>
+            </ol>
+            <li>Divisão do capítulo</li>
+            <li>Divisão do capítulo</li>
+        </ol>
+
+    
+
+    </ol>
+    <h2>Listas de definições</h2>
+    <p>São espécies de "dicionários". Cada elemento da lista tem um título. Usamos a tag DL para criá-la, a tag DT para o título  e tag DD para o que não é o título.</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a criação de sites</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programção para a criação da interatividade de um site.</dd>
+    </dl>
+</body>
+</html>
