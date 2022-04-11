@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlinks</title>
+</head>
+<body>
+    <h1>Hyperlinks</h1>
+    <h2>O que são hyperlinks?</h2>
+    <p>Hyperlinks são textos que permitem a ligação de um ponto a outro na World Wide Web</p>
+    <h2>Como criar hyperlinks?</h2>
+    <p>Para criar hyperlinks precisamos criar âncoras através da tag &lt;a&gt;. O principal atributo da tag a é href, que pega uma referência hypertext.</p>
+    <p>Exemplo:</p>
+    <p>&lt;a href="https://github.com/edufsi"&gt;Link para meu Github&lt;/a&gt;</p>
+    <p>O resultado é esse: <a href="https://github.com/edufsi" hreflang="pt-br">Link para meu Github</a></p>
+    <p>Outro atributo importante da tag a é o hreflang, que determina a língua que o navegador deve esperar encontrar no seu site.</p>
+    </h2>
+    <h3>Destino do site aberto</h3>
+    <p>Como padrão, o site aberto irá sobrepor o site já aberto. Isso pode ser um comportamento desejável se você está navegando por outras páginas de um mesmo servidor, mas quando o link é para uma página terceira, o bom é que se abra uma nova guia quando o site for aberto.</p>
+    <p>Para isso, usamos o atributo target.</p>
+    <p>Esse atributo suporta os seguintes valores:</p>
+    <ol>
+        <li>_blank: abre o link em uma nova janela em branco</li>
+        <li>_self: abre o link no frame atual (padrão)</li>
+        <li>_top: desfaz os frames e abre o destino no navegador completo</li>
+        <li>nome-do-frame: caso esteja usando frames, indicar o nome da janela e abrir</li>
+        <li>_parent: similar ao uso do_top em uma referência à janela mãe</li>
+    </ol>
+    <p>Como o uso de frames é raro, por agora é bom saber apenas sobre o _self e o _blank</p>
+    <p>Exemplo:</p>
+    <p>&lt;a href="https://github.com/edufsi" hreflang="pt-br" <strong>target="_blank"</strong>&gt;Link para meu Github&lt;/a&gt;</p>
+    <p>Terá como resultado um hyperlink que abrirá uma nova guia no navegador: <a href="https://github.com/edufsi" hreflang="pt-br" target="_blank">Link para meu Github</a></p>
+    <h3>Indicando a natureza do destino</h3>
+    <p>Para indicar a natureza do destino do link, utilizamos o atributo rel</p>
+    <p>O atributo rel aceita vários valores, entre eles:</p>
+    <ol>
+        <li>next: indica que o link é para a próxima parte do documento atual</li>
+        <li>prev: indica que o link é para a parte anterior do documento atual</li>
+        <li>author: indica que é um link para o site do autor do atual artigo</li>
+        <li>external: indica que é um link para um site que não faz parte do site atual</li>
+        <li>nofollow: indica o endereço para um site não endossado, como um link pago.</li>
+</ol>
+    <h3>Páginas de um mesmo servidor</h3>
+    <p>Utilizando o que vimos até aqui criaremos mais páginas:</p>
+<ol>
+    
+        <li>
+            <p><a href="Segunda/Segunda.html" hreflang="pt-br" target="_self" rel="next" >Link para a segunda página</a></p>
+        </li>
+        <li><a href="Terceira/Terceira.html" hreflang="pt-br" target="_self" rel="author">link para uma terceira página do mesmo autor</a></li> 
+        <!--Navegando por pastas locais: servidores web normalmente rodam o sistema operacional Linux. Nesse sistema, se estiver se referindo à pasta atual do servidor, pode-se usar ./ antes do nome do arquivo. Agora, se quiser se referir à pasta imediatamente superior na hierarquia, use ../ para voltar para a pasta mais externa-->
+</ol>
+   
+    
+
+    <h2>Fazendo dowloads</h2>
+    <p>Para criar um link em que será feito um dowload, utiliza-se os atributos dowload e type na tag a.</p>
+    <p>No atributo download coloca-se o nome do arquivo a se baixar e no atributo type coloca-se o tipo de arquivo que será baixado. O atributo type serve para informar ao seu navegador qual será o tipo de arquivo baixado pelo seu link. Para isso ele aceita valores específicos, que podem ser conferidos no site:</p>
+    <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" hreflang="en" rel="external" target="_blank">Media Type</a>
+    <p>Exemplos:</p>
+    <ol>
+        <li><a href="hamlet.pdf" download="Hamlet.pdf" type="application/pdf">Baixar Hamlet em PDF</a></li>
+        <li><a href="hamlet.zip" download="Hamlet.zip" type="application/zip">Baixar Hamlet versão compactada</a></li>
+    </ol>
+</body>
+</html>
