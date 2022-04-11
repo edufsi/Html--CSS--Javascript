@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ex07</title>
+    <title>Teste</title>
 </head>
 <body>
     <h1>Imagens dinâmicas, áudios e vídeos</h1>
@@ -13,9 +13,11 @@
     <h2>Imagens dinâmicas</h2>
     <p>Para fazer uma imagem dinâmica, precisamos conhecer as tags &lt;picture&gt; e &lt;source&gt;</p>
     <picture>
-        <source media="(max-width:730px)" srcset="Imagens/imagem-p.png" type="image/png">
-        <source media="(max-width:1030px)" srcset="Imagens/imagem-m.png" type="image/png">
-        <img src="Imagens/imagem-g.png" alt="Imagem grande">
+        
+    
+        <source media="(min-width: 300px)" scrset="Imagens/imagem-m.png" type="image/png">
+        <source media="(min-width:1030px)" srcset="Imagens/imagem-g.png" type="image/png">
+        <img src="Imagens/imagem-p.png" alt="Imagem flexível">
     </picture>
 </body>
 </html>
