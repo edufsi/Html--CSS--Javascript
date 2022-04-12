@@ -16,13 +16,18 @@
     <p>A tag source é usada para definir muitos recursos de mídia em diferentes formatos. Para colocar uma imagem flexível, precisamos especificar suas características utilizando a tag source com o elemento media, que aceita, entre outros, o max-width: xxxpx, o que dá um valor máximo de largura para se colocar determinada imagem. Além disso, também é preciso especificar o tipo da mídia com o elemento type e a imagem a ser colocada com o elemento scrset.</p>
     <p>Exemplo:</p>
     <picture>
-        <source srcset="Imagens/"
+        <source media="(max-width:630px)" srcset="Imagens/codigo-p.png" type="image/png">
+        <source media="(max-width:1030px)" srcset="Imagens/codigo-m.png" type="image/png">
+        <img src="Imagens/codigo-g.png" alt="Imagem flexível">
     </picture>
    
     <picture> 
         <source media="(max-width:730px)" srcset="Imagens/imagem-p.png" type="image/png"> 
         <source media="(max-width:1030px)" srcset="Imagens/imagem-m.png" type="image/png">
-        <img src="Imagens/imagem-g.png" alt="Imagem grande">
+        <img src="Imagens/imagem-g.png" alt="Imagem flexível">
     </picture>
+    <h2>Áudios</h2>
+    <p>Para colocar áudios no seu site, é preciso utilizar a tag audio juntamente com especificações colocadas com a tag source.</p>
+    
 </body>
 </html>
