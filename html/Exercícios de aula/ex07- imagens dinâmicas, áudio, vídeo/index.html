@@ -12,8 +12,15 @@
     <p>Antes de tudo, é preciso entender que sites são acessados em muitos tipos de mídias com telas de tamanhos diferentes: celulares, computadores, tablets, televisões. Assim, como já mencionado no curso, se usarmos imagens muito grandes e com muita resolução em nossos sites, deveremos forçar a redução do tamanho para telas menores com CSS, mas isso não diminui o quanto o arquivo pesa, assim nosso site acaba ficando lento. Ninguém gosta de sites lentos, nem mesmo os próprios mecanismos de busca dos navegadores(SEO- (otimização para mecanismos de busca). Dessa forma, precisamos adaptar nosso conteúdo ao tamanho da tela do dispositivo que acessará nosso site, tirando assim peso desnecessário. <strong>Essa é a função das imagens dinâmicas</strong> </p>
     <h2>Imagens dinâmicas</h2>
     <p>Para fazer uma imagem dinâmica, precisamos conhecer as tags &lt;picture&gt; e &lt;source&gt;</p>
+    <p>A tag picture é usada para dar flexibiliade para os desenvolvedores possam fornecer especificações para a imagem a ser colocada</p>
+    <p>A tag source é usada para definir muitos recursos de mídia em diferentes formatos. Para colocar uma imagem flexível, precisamos especificar suas características utilizando a tag source com o elemento media, que aceita, entre outros, o max-width: xxxpx, o que dá um valor máximo de largura para se colocar determinada imagem. Além disso, também é preciso especificar o tipo da mídia com o elemento type e a imagem a ser colocada com o elemento scrset.</p>
+    <p>Exemplo:</p>
     <picture>
-        <source media="(max-width:730px)" srcset="Imagens/imagem-p.png" type="image/png">
+        <source srcset="Imagens/"
+    </picture>
+   
+    <picture> 
+        <source media="(max-width:730px)" srcset="Imagens/imagem-p.png" type="image/png"> 
         <source media="(max-width:1030px)" srcset="Imagens/imagem-m.png" type="image/png">
         <img src="Imagens/imagem-g.png" alt="Imagem grande">
     </picture>
