@@ -27,7 +27,12 @@
         <img src="Imagens/imagem-g.png" alt="Imagem flexível">
     </picture>
     <h2>Áudios</h2>
-    <p>Para colocar áudios no seu site, é preciso utilizar a tag audio juntamente com especificações colocadas com a tag source.</p>
-    
+    <p>Para colocar áudios no seu site, é preciso utilizar a tag audio. Se quisermos adicionar opções, precisamos utilizar juntamente com especificações colocadas com a tag source.</p>
+    <audio preload="metadata" controls autoplay loop> <!--preload configura o que será baixado do áudio antes de ser dado o play no víde: metadata baixa apenas informações sobre o arquivo (tamanho, tempo, etc), none não baixa nada e auto carrega o arquivo de áudio inteiro, controls faz com que o botão play fique visível, autoplay faz com que o vídeo comece a rodar já quando o site é aberto e loop faz com que o vídeo fique rodando.-->
+        <source src="sailor-song.mp3" type="audio/mpeg">
+        <!--Seria bom se tivéssemos a versão desse áudio convertida em ogg e wav para dar outras opções caso o navegador que está sendo usado não suporte mp3, mas no exemplo não se faz necessário. Lembrando que os sources sempre "resolverão" de cima pra baixo-->
+        <source src="sailor-song.ogg" type="audio/ogg">
+        <source src="sailor-song.wav" type="image/wav">
+    </audio>
 </body>
 </html>
