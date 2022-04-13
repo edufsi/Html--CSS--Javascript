@@ -33,6 +33,20 @@
         <!--Seria bom se tivéssemos a versão desse áudio convertida em ogg e wav para dar outras opções caso o navegador que está sendo usado não suporte mp3, mas no exemplo não se faz necessário. Lembrando que os sources sempre "resolverão" de cima pra baixo-->
         <source src="sailor-song.ogg" type="audio/ogg">
         <source src="sailor-song.wav" type="image/wav">
+        <p>Seu navegador não tem compatibilidade com as extensões de áudio mp3, ogg e wav</p>
+        <!--Se tudo der errado, será exibida a mensagem acima-->
     </audio>
+    <h2>Inserindo vídeos hospedados localmente</h2>
+    <p>Para adicionar vídeos, utilizamos a tag video, utilizando a tag source para dar especificações</p>
+    <video src="Pexels.mp4" width="300" controls></video> <!--mesmos elementos do áudio. E novamente, não é porque está funcionado com o Google que devemos deixar assim. Precisamos colocar outros formatos de vídeo para grantir que algum será suportado por qualquer que for o navegador utilizado-->
+    <video width="300" poster="cebolas.jpg" controls> <!--Poster é a thumb do vídeo-->
+        <source src="Pexels.mp4" type="video/mp4">
+        <source src="Pexels.mkv" type="video/mp4">
+        <source src="Pexels.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+    <p>Vídeos em hospedagem própria tem um custo de banda <strong>MUITO GRANDE</strong>, por isso não é muito recomendado.</p>
+
+
 </body>
 </html>
