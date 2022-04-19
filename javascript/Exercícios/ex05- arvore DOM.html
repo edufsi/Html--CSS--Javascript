@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore DOM</title>
+</head>
+<body>
+    <h1>Árvore DOM</h1>
+    <h2>DOM = "Document Object Model"</h2>
+    <p>A árvore DOM é um conjunto de objetos <strong>dentro do navegador</strong> que dá acesso aos componentes internos do website</p>
+    <img src="Diagrama1.png" alt="Representação da árvore DOM">
+    <p>A Árvore DOM começa no objeto <code>window</code>, ele é raiz da árvore. A partir do <code>window</code>, existem muitos outros objetos, como <code>location</code>, <code>document</code>, e <code>history</code>, todos irmãos, e todos os objetos exemplificados no diagrama acima. como exemplificado no diagrama acima </p> 
+    <h2>Selecionando elementos dentro da árvore DOM</h2>
+    <p>Existem vários métodos para acessarmos objetos dentro da árvore DOM. Podemos acessá-la por:
+    <ul type="circle">
+        <li><strong>Marca</strong> (tag): utilizando o getElementsByTagName()</li>
+        <p>Esse método seleciona todas as tags com o mesmo nome.</p>
+        <p>Para selecionarmos parágrafos, por exemplo, escreveríamos assim:</p>
+        <p><code>window.document.getElementsByTagName('p')</code></p>
+        <p>Na verdade, não seria necessário escrever window. Caso quiséssemos selecionar algum parágrafo específico, bastaria colocar entre colchetes o número daquele parágrafo (sempre começando por 0, obviamente), dessa forma:</p>
+        <p><code>document.getElementsByTagName('p')[0] // seleciona o primeiro parágrafo</code></p> 
+        <p>Agora, podemos colocar esse parágrafo dentro de uma variável e fazer o que der na telha com ele:</p>
+        <p><code>var p1 document.getElementsByTagName('p')[0] </code></p>
+        <p><code>document.write(`No primeiro parágrafo está escrito assim: ${p1.innerText}` //innerText pega o texto, innerHTML pega além do texto, as formatações, ou seja, os filhos dele na árvore</code></p>
+        <p></p>
+        <li><strong>ID</strong>: getElementById()
+        <p>Esse método seleciona um elemento com dado ID</p></li>
+        <p>O texto a seguir foi posto numa div e a ele foi atribuído o id text:</p>
+        <div id="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut itaque numquam sint commodi reprehenderit neque debitis asperiores quaerat cupiditate aliquid! Accusamus ipsum sequi, quibusdam beatae quam aliquid numquam sit quasi.</div>
+        <p>Utilizando o seguinte código podemos selecioná-lo:</p>
+        <p><code> window.document.getElementById('text')</code></p>
+        <li><strong>Classe</strong>: getElementsByClassName()</li>
+        <li><strong>Nome</strong>: getElementsByName()</li>
+        <p>Do mesmo jeito que fizemos com ID, podemos fazer com nome. Repare, entretanto, que quando selecionamos por ID estamos selecionado um elemento único, (ELEMENT), já quando estamos selecionando por nome, estmos selecionando mais de um (ELEMENTS), ou seja,é necessário que se esclareça com os colchetes qual o elemento que se deseja selecionar</p>
+        <li><strong>Seletor</strong></li>
+ 
+    </ul>
+    </p>
+    <script>
+        var text =  window.document.getElementById('text')
+        text.style.background = 'red'
+        text.style.fontFamily = 'Arial'
+    </script>
+</body>
+</html>
