@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* charset para não termos problemas com acentuação */
+
+body {
+    background-color: cornsilk;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
