@@ -3,9 +3,23 @@
 
 body {
     background-image:linear-gradient(to right,#8CBF67,  #7da263);
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px; /*Temos 2 tipos de tamanho de fonte: as de tamanho relativo e as de tamanho absoluto. 
+    Fontes de tamanho absoluto: são valores absolutos (no entanto, elas podem mudar de dispositivo para dispositivo):
+        cm, mm, in (polegadas), px (pixels), pt (ponto), pc (paica). O órgão oficial que gerencia a HTML recomenda o uso do px
+    Fontes de tamanho relativo: são valores que dependem de outro valor:
+        em (relação entre o tamanho atual da fonte- o tamanho do M maiúsculo), ex (relação entre o tamanho x de uma fonte- do x minúsculo), vw (porcentagem da largura da tela), vh (porcentagem da altura da tela), %
 
+
+    font-family:  Arial, Helvetica, sans-serif /*Essa declaração serve para segurança: caso um dispositivo não tenha a primeira fonte passada, a segunda será mostrada, e caso o dispositivo não tenha a segunda, será mostrada qualquer fonte da família que for presente no dispositivo. Poderíamos ter adicionado mais fontes ali
+
+    /*Famílias de fontes (um site qualquer começa com a fonte Times New Roman):
+    serif: fontes serifadas (com serifas. EX: Times New Roman, Times)
+    sans-serif: sem serifas (EX: Arial, Helvetica)
+    monospace: monoespaçadas (EX: Courier New)
+    handwriting: escritas à mão
+    dispaly: especiais que não se encaixam em nehuma dessas regras*/
+
+    /*Para importar fontes, o Google Fonts é muito recomendado.
 }
 
 main {
