@@ -3,6 +3,7 @@
 
 body {
     background-image:linear-gradient(to right,#8CBF67,  #7da263);
+    ;
     font-size: 15px; /*Temos 2 tipos de tamanho de fonte: as de tamanho relativo e as de tamanho absoluto. 
     Fontes de tamanho absoluto: são valores absolutos (no entanto, elas podem mudar de dispositivo para dispositivo):
         cm, mm, in (polegadas), px (pixels), pt (ponto), pc (paica). O órgão oficial que gerencia a HTML recomenda o uso do px
@@ -19,7 +20,15 @@ body {
     handwriting: escritas à mão
     dispaly: especiais que não se encaixam em nehuma dessas regras*/
 
-    /*Para importar fontes, o Google Fonts é muito recomendado.
+    
+    /*Para importar fontes, o Google Fonts é muito recomendado.*/
+
+
+
+    
+    font-weight: normal; /* lighter, nomral bold, bolder ou opções de 100 a 900 (em fontes que possuem todas essas possibilidades)*/
+    font-style: italic;
+
 }
 
 main {
@@ -35,6 +44,10 @@ h1 {
     color: #3E4573;
     text-align: center;
     text-shadow: 1px 1px 2px #6e77ac91; /*Mesma coisa que o box-shadow*/
+    /* SHORTHAND FONT
+    font: font-style -> font-weight -> font-size -> font-family; */
+    font: italic bold 2em Arial, Helvetica, sans-serif;
+    text-decoration: underline;  /*Sublinhado e várias outras alternativas*/
 }
 
 h2 {
@@ -43,4 +56,6 @@ h2 {
 }
 p {
     text-align: justify;
+    font: normal normal 1em Arial;
+    
 }
