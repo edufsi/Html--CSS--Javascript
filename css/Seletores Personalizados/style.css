@@ -1,13 +1,40 @@
 @charset "UTF-8";
+/*Para fazer referência à um id em CSS, utilizamos uma # e para fazer referência à uma classe utilizamos um .:
+class html - . css
+id html - # css */
 
 body {
-    background-color: #89E68D;
+    background-color: #8cd994dc;
+    font: normal 1em 'Arial', Helvetica, sans-serif;
 }
 
-h1 {
-    color: #264027 ;
+
+h1#principal { /* Não é necessário colocar a tag antes do nome do id, só colocamos para mostrar de onde ele está vindo*/
+    background-color: #24662A;
+    color:  white;
+    text-align: center;
 }
 
-h2 {
-    color: #5C665C
+.basico {
+    color: #3AA645;
+   
+
 }
+
+.intermediario {
+    color: #E6DF2E
+}
+.avancado {
+    color:red;
+}
+
+.topico {
+    text-align: right;
+
+}
+
+p {
+    text-align: justify;
+}
+
+

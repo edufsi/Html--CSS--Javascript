@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+    <style>
+        .explicacao {
+            background-color: cornsilk;
+
+        }
+
+        .quadrado {
+            background-color: antiquewhite;
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .exemplo_hover:hover {
+            color: red
+        }
+
+        .a:visited {
+            color: red;
+            
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        
+        .tadaaa:hover {
+            color: red
+        }
+       
+        .tadaaa::before {
+            content: '>';
+        
+        }
+
+        .tadaaa::after {
+            content: '<';
+            
+        }
+
+        .surpresa {
+            background-color: antiquewhite;
+            
+        }
+        /* O sinal de maior aqui quer dizer que o p está dentro de nossa div, ou seja, estamos acessando a div e dentro dela o p.*/
+        .surpresa > p {
+            display: none;
+        }
+        
+        .surpresa:hover > p {
+            display: block;
+            background-color: rgb(191, 0, 255);
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Pseudo-Classes</h1>
+    <div class="explicacao">
+        <h1>Div</h1>
+        <p>Uma div é um espaço/ uma divisão qualquer dentro de nosso site</p>
+        <p>Ela serve para permitir a personalização de toda uma área. Tudo o que está nesse retângulo colorido faz parte da div em que esses parágrafos estão dentro</p>
+        <p>Para textos, podemos criar uma divisão usando a tag <span>&lt;span&gt;</span></p>
+    </div>
+    <div class="quadrado">01</div>
+    <div class="quadrado">02</div>
+    <div class="quadrado">03</div>
+    <h1>Pseudo-Classes</h1>
+    <p>Pseudo-Classes são palavras chaves adicionadas às declarações de um seletor após um sinal de dois pontos (:)e especificam algum estado do elemento: se o elemento está vazio, ativado, desativado... </p>
+    <p>Algumas das Pseudo-Classes são: :hover, :visited, :active, :checked, :empty e :focus</p>
+    <p class="exemplo_hover">Olhe este parágrafo de exemplo. Quando o mouse está por cima dele, ele fica vermelho. Isso acontece porque no estilo do site colocamos esse parágrafo para ficar vermelho quando ele estiver em um determinado estado- :hover - ou seja, com o mouse por cima</p>
+    <p>Normalmente os links ficam de cor violeta quando já os visitamos, mas isso pode ser alterado com as pseudo classes: :visited. Veja: <a class="a" href="https://www.google.com/" hreflang="pt-br" target="_blank"> Link para a página do Google</a></p>
+    <h1>Pseudo-Elementos</h1>
+    <p>Já um Pseudo-Elemento CSS é uma palavra-chave adicionada às declaraões de um seletor após dois sinais de dois pontos (::) e permitem formatar um pedaço específico do elemtno referenciado. Exemplos são- ::before, ::after, ::first-letter, ::first-line.</p>
+    
+    <p>Agora, veja <span class="tadaaa">aqui</span> o que acontece utilizando pseudo-elementos: utilizando :: after e ::before adicionamos > e < na palavra aqui</p>
+    <div class="surpresa">
+        Passe o mouse aqui
+        <p>TADAAAAAAAAAAAAA</p>
+    </div>
+    <p>Viu?</p>
+
+
+</body>
+</html>
