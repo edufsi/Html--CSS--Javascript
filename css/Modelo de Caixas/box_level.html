@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas Box-Level</title>
+    <style>
+        h1 {
+            
+            background-color: blanchedalmond;
+            height: 200px;
+            width: 200px;
+            /*A borda e o contorno são semelhantes em relação à declaração. Seus shorthands são:
+            outline/border: width style color*/
+            outline-width: 5px;
+            outline-style: solid;
+            outline-color: red;
+
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+
+            /* O shorthand para o acolchoamento e a margem é os números de cada lado dispostos em sentido horário:
+            padding: cima direita baixo esquerda
+            Se os quatro lados forem iguais, entretanto, basta apenas informar uma vez*/
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            
+            
+            /* margin: auto; 
+             Essa declaração sempre centraliza a caixa, não importando o tamanho da janela. Caso a margem seja colocada com números, ela não irá centralizar automoticamente conforme o tamanho da caixa. auto pode ir, inclusive, dentro das shothands, de modo a centralizar apenas uma das dimensões. Por exemplo:
+             margin: 20px, auto, 40px, auto */ 
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            }
+
+        a {
+            
+            border-width: 5px;
+            border-style: solid;
+            border-color: red;
+        }
+
+        .box-level {
+            display: block;
+        }
+
+        .inline {
+            font-size: 5px;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1> <!--Utilizando o DevTools. Lembre que UserAgent é o navegador exibindo o conteúdo-->
+    <p>Parágrafos são exemplos de caixas box-level, mas <a href="#">links são exemplos de caixas inline-level</a></p>
+    <p>Podemos tansformar elementos inline em box-level e vice-versa nas CSS usando display: inline ou display: block, ou até mesmo display: inline-block</p>
+    <a class="box-level" href="#">Ou seja, podemos transformar até mesmo links em caixas box-level</a>
+    <h1 class="inline">Ou títulos em inline</h1>
+
+</body>
+</html>
