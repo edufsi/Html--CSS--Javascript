@@ -36,13 +36,16 @@
         <li><strong>Nome</strong>: getElementsByName()</li>
         <p>Do mesmo jeito que fizemos com ID, podemos fazer com nome. Repare, entretanto, que quando selecionamos por ID estamos selecionado um elemento único, (ELEMENT), já quando estamos selecionando por nome, estmos selecionando mais de um (ELEMENTS), ou seja,é necessário que se esclareça com os colchetes qual o elemento que se deseja selecionar</p>
         <li><strong>Seletor</strong></li>
- 
+        <p>Utilizando <code>querySelector()</code> e <code>querySelectorAll</code> podemos selecionar elementos por seletores.</p>
+        <p>Seletores utilizam a sintaxe das CSS</p>
     </ul>
     </p>
     <script>
         var text =  window.document.getElementById('text')
         text.style.background = 'red'
         text.style.fontFamily = 'Arial'
+        var list = document.querySelector('ul')
+        list.type = 'square'
     </script>
 </body>
 </html>
