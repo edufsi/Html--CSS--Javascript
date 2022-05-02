@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        main {
+            width: 100%;
+            
+            /*border-radius: arredondamento 
+            da borda*/  
+        }
+        aside {
+            width: 21%;
+            padding-left: 30px;
+            margin-left: 30px;
+            float: right;
+            background-color: #9a3fc271;
+        }
+
+        section {
+            background-color: #c14bf47a;
+            width: 70%;
+            margin: 1px;
+            padding: 3px;
+            margin: 10px;
+            box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.345);
+            /*inset- sombra interna*/
+            border-radius: 10px 10px 10px 10px; /* = border-radius: 10px;*/
+
+            /* border-radius: shorthand para arredondamento da borda. Equivale a: border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius. Caso sejam passados dois parâmetros, a superior esquerda = inferior direita, enquanto a superior direita = inferior esquerda 
+            Podemos usar porcentagem também com border-radius. Uma bola é feita com 50% de border-radius*/
+        }
+
+
+        header{
+            background-color: #8846F2;
+            padding: 10px;
+            text-align: center;
+            margin: 10px;
+        }
+        nav {
+            background-color: #5D30A6;
+            box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.314); 
+            /*box-shadow (shorthand): deslocamento horizontal deslocamento vertical espalhamento (blur) cor*/
+            
+        }
+
+        nav > a {
+            color: white;
+            
+        }
+
+        nav > a:hover {
+            color: red;
+            
+        }
+        
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grouping Tags, Sombras e Bordas(pt1)</h1>
+        <nav>
+            <a href="#">Página 1</a>
+            <a href="#">Página 2</a>
+            <a href="#">Aqui é a área de nav</a>
+            
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>Aside</h2>
+            <p>Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente, está posicionado ao lado de umm texto ou mesmo no meio dele. </p>
+        </aside>
+        <section>
+        <p>Antigamente, a lingagem HTML tinha apenas duas tags de agrupamento genérico: span para inline-level e div para box-level. Atualmente, existem vários agregadores semânticos na linguagem.</p>
+     
+            <h2>Header</h2>
+            <p>Cria áreas relativas à cabeçalhos. Pode ser o cabeçalho principal de um site ou mesmo o cabeçalho de um artigo ou seção. Normalmente inclui títulos, subtítulos e pode conter um menu de navegação.</p>
+        </section>
+        <section>
+            <h2>Nav</h2>
+            <p>Cria áreas relativas à menus de navegação</p>
+        </section>
+        <section>
+            <h2>Main</h2>
+            <p>Usado para delimitar o conteúdo principal do site. Normalmente, agrupa seções, artigos e conteúdo periféricos</p>
+        </section>
+        <section>
+            <h2>Section</h2>
+            <p>Cria seções genéricas para a página. Segundo a documentação oficial da W3C: uma seção é um agrupamento temático de conteúdos, tipicamente com um cabeçalho.</p>
+        </section>
+        <section>
+            <h2>Article</h2>
+            <p>Representa uma composição independente dentro de um site ou seção.</p>
+        </section>
+     
+        <section>
+            <h2>Footer</h2>
+            <p>Cria um rodapé para o site, seção ou artigo. Não é um conteúdo principal nem periférico, mas possui coisas como informações sobre autoria, links adicionais, documentos relacionados e mapa do site. </p>
+        </section>
+    </main>
+    <footer>
+        <p>Footer: Desenvolvido por Eduardo. Cores Horrorosas meramente ilustrativas</p>
+    </footer>
+</body>
+</html>
