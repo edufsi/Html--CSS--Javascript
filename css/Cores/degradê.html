@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degradês em CSS</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        div {
+            border: 5px solid black;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .primeira {
+            background-image: linear-gradient(to top, white, blue)
+            /*com background-image linear gradient podemos fazer um degradê (gradiente linear)
+
+            No caso, o degradê vai de baixo para cima (vai até o topo), indo do branco ao azul*/
+        }
+
+        .segunda {
+            background-image: linear-gradient(to right, green, yellow);
+            /*Agora, o degradê vai da esquerda para a direita, começando no verde e indo até o amarelo. 
+
+            Como se pode ver, o básico é: 
+            linear-gradient(to top/to bottom/to right/to left, cor de início, cor do fim)*/
+
+        }
+
+        .terceira {
+            background-image: linear-gradient(to bottom, red, rgb(255, 4, 255));
+        }
+
+        .quarta {
+            background-image: linear-gradient(to left, black, white);
+        }
+
+        .quinta {
+            background-image: linear-gradient(to right, rgb(0, 205, 251), rgb(0, 0, 215));
+        }
+
+        .sexta {
+            background-image: linear-gradient(orange, purple);
+            /*Se a direção não for indicada, sairá de cima para baixo*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Degradês em CSS</h1>
+    <div class="primeira">01</div>
+    <div class="segunda">02</div>
+    <div class="terceira">03</div>
+    <div class="quarta">04</div>
+    <div class="quinta">05</div>
+    <div class="sexta">06</div>
+</body>
+</html>

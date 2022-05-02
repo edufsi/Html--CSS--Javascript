@@ -44,7 +44,7 @@
             
             border-width: 5px;
             border-style: solid;
-            border-color: red;
+            border-color: black;
         }
 
         .box-level {
@@ -55,6 +55,20 @@
             font-size: 5px;
             display: inline;
         }
+
+        div {
+            display: inline-block;
+            border: 5px solid black;
+            width: 90px;
+            height: 90px;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+       
+
+
     </style>
 </head>
 <body>
@@ -62,7 +76,11 @@
     <p>Parágrafos são exemplos de caixas box-level, mas <a href="#">links são exemplos de caixas inline-level</a></p>
     <p>Podemos tansformar elementos inline em box-level e vice-versa nas CSS usando display: inline ou display: block, ou até mesmo display: inline-block</p>
     <a class="box-level" href="#">Ou seja, podemos transformar até mesmo links em caixas box-level</a>
-    <h1 class="inline">Ou títulos em inline</h1>
+    <p>Um inline-block é um box-level que tem características de inline-level:</p>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    
 
 </body>
 </html>
