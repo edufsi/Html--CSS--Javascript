@@ -9,27 +9,147 @@
     <style>
         
         body {
-            background-color: rgba(0, 226, 0, 0.407);
+            background-color: #E9E6C3;
         }
+
+        header > p, header > h1{
+            text-align: center;
+        }
+        .link {
+            border: 1px solid black;
+            
+        
+        }
+
+       
+            
+        
+
+      
+
+     
+        
+        nav > a:hover {
+            background: rgb(0, 207, 0);
+            color: black;
+            transition: 1s
+        }
+
         header {
             border: 6px solid black;
             padding: 10px;
-            margin: 10px;
-            background-image: linear-gradient(to bottom, rgb(0, 215, 0), green);
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            background-image: linear-gradient(to bottom, #33bd6b, rgb(1, 53, 22));
+            
+            width: 85%;
         }
 
+        header > h1, header > p {
+            color: white;
+            
+        }
+        
+        nav > a {
+            color: rgb(0, 202, 0);
+            background-color: transparent;
+            text-decoration: none;
+            border-radius: 2px;
+            padding: 2px
+        }
         main {
             border: 6px solid black;
             padding: 10px;
-            margin: 10px;
+            margin: auto;
             background-color: white;
+            width: 85%;
         }
+        
+        a {
+            text-decoration: none;
+            background-color: #82DCA4;
+            
+        }
+            
+        
 
-        footer {
-            background-color: black;
-            color: white;
-            padding: 5px;
-        }
+      
+       p {
+           text-align: justify;
+       }
+
+       h1, h2{
+           text-align: center;
+       }
+
+       img {
+            
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 80%
+       }
+
+       .lista {
+           background-color: #85e8b0d0;
+           margin-top: 0;
+           padding: 10px;
+           border-bottom-left-radius: 5px;
+           border-bottom-right-radius: 5px;
+       }
+       .lista > p {
+            margin-top: 0 
+       }
+       
+
+         h2 {
+           background-image: linear-gradient(to right, #82DCA4, white);
+       }
+
+       .youtube_video {
+           width: 100%;
+           overflow: hidden; /* Configura o que acontecerá se um elemento for maior do que o container: hidden irá cortar o excesso e esconder o resto, scroll/auto farão uma scrollbar, e visible deixará o excesso visível */ 
+           position: relative; /* especifica o tipo de método de posicionamento usado por um elemento */
+           
+       }
+
+       .youtube_video::after {
+           display: block;
+           content: "";
+           padding-top: 56.25%; /*Essa porcentagem é baseada na razão de vídeos do youtube, que é 16/9. Precisamos da porgentagem que a altura é da largura para deixarmos o vídeo responsivo, e para isso usamos a fórmula: razão entre altura e largura . 100
+           No caso, 9/16= 0,5625, e 0,5625 . 100 = 56,25% */
+       }
+
+       .youtube_video iframe {
+           position: absolute;
+           top: 0;
+           bottom: 0;
+           width: 100%;
+           height: 100%;
+       }
+
+       .aprender_mais > h2 {
+           background-color: #023B1A;
+           background-image: none;
+           color: white;
+           margin-left: auto;
+           margin-right: auto;
+           margin-bottom: 0;
+           border-top-left-radius: 5px;
+           border-top-right-radius: 5px;
+       }
+
+       footer {
+           width: 85%;
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 10px;
+           border: 6px solid black;
+           padding: 10px;
+           background-color: #023B1A;
+           color: white;
+       }
     </style>
 </head>
 <body>
@@ -40,22 +160,24 @@
             <a href="#">Home</a>
             <a href="#">Notícias</a>
             <a href="#">Curiosidades</a>
-            <a href="#">Fale conosco</a>
+            <a href="#">Contato</a>
         </nav>
     </header>
     <main>
         <h1>História do mascote do android</h1>
         <p>Provavelmente você sabe que o sistema operacional Android, mantido pelo Google, é um dos mais utilizados para dispositivos móveis em todo o mundo. Mas tavez você não saiba que o seu simpático mascote tem um nome e uma história muito curiosa? Pois acompanhe esse artigo para aprender muita coisa sobre esse robozinho.
         </p>
-        <article>
-            <h2>A Primeira Versão</h2>
-            <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <a href="#">Dan Morrill</a>. Ele conta que abriu o <a href="https://inkscape.org/" target="_blank" rel="external">Inkscape</a> (software livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.
-            </p>
-            <picture>
-                <source media="(max-width:810px)" srcset="imagens/dan-droids-pq.png" type="image/png">
-                <img src="imagens/dan-droids.png" alt="dan-droids">
-            </picture>
-        </article>
+        <div class="flex">
+            <article class="flex-container">
+                <h2>A Primeira Versão</h2>
+                <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <a href="#">Dan Morrill</a>. Ele conta que abriu o <a href="https://inkscape.org/" target="_blank" rel="external">Inkscape</a> (software livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.
+                </p>
+                <picture>
+                    <source media="(max-width:810px)" srcset="imagens/dan-droids-pq.png" type="image/png">
+                    <img src="imagens/dan-droids.png" alt="dan-droids">
+                </picture>
+            </article>
+        </div>
         <article>
             <h2>Surge um novo mascote</h2>
             <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora russa <a href="#">Irina Blok</a>, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.</p>
@@ -69,34 +191,39 @@
             </picture>
             <p>A principal inspiração para os traços do novo Bugdroid veio daqueles bonequinhos que ilustram portas de banheiro para indicar o gênero de cada porta. Conta a lenda que a artista estava criando em sua mesa no escritório do Google e olhou para o lado dos banheiros e a identificação foi imediata: simples, limpo, objetivo.
             </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="youtube_video"><iframe src="https://www.youtube.com/embed/l2UDgpLz20M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         </article>
-        <article>
+        
+        <article class="aprender_mais">
             <h2>Quer aprender mais?</h2>
-            <p>Outro asssunto curioso em relação ao Android é que cada versão sempre foi nomeada em homenagem a um doce, em ordem alfabética a partir da versão 1.5 até a versão 9.0.
-            </p>
-            <ul type="round">
-                <li>1.5 - Cupcake</li>
-                <li>1.6 - Donut</li>
-                <li>3.0 - Eclair</li>
-                <li>2.2 - Froyo</li>
-                <li>2.3 - Gingerbread</li>
-                <li>3.0 - Honeycomb</li>
-                <li>4.0 - Ice Cream Sandwich</li>
-                <li>4.1 - Jelly Bean</li>
-                <li>4.4 - KitKay</li>
-                <li>5.0 - Lolipop</li>
-                <li>6.0 - Marshmallow</li>
-                <li>7.0 - Nougat</li>
-                <li>8.0 - Oreo</li>
-                <li>9.0 - Pie</li>
-            </ul>
-            <p>Infelizmente, o Android Q não existiu, pois o Google resolveu pôr fim a essa divertida prática e começou a usar numerações, o que deu origem ao Android 10.</p>
-            <p>Acesse aqui o site <a href="#">Android History</a> para conhecer a sequência das versões "adocicadas" e o que cada uma trouxe para o sistema Android</p>
-        </article>
+            <div class="lista">
+                <p>Outro asssunto curioso em relação ao Android é que cada versão sempre foi nomeada em homenagem a um doce, em ordem alfabética a partir da versão 1.5 até a versão 9.0.
+                </p>
+                <ul type="round">
+                    <li>1.5 - Cupcake</li>
+                    <li>1.6 - Donut</li>
+                    <li>3.0 - Eclair</li>
+                    <li>2.2 - Froyo</li>
+                    <li>2.3 - Gingerbread</li>
+                    <li>3.0 - Honeycomb</li>
+                    <li>4.0 - Ice Cream Sandwich</li>
+                    <li>4.1 - Jelly Bean</li>
+                    <li>4.4 - KitKay</li>
+                    <li>5.0 - Lolipop</li>
+                    <li>6.0 - Marshmallow</li>
+                    <li>7.0 - Nougat</li>
+                    <li>8.0 - Oreo</li>
+                    <li>9.0 - Pie</li>
+                </ul>
+                <p>Infelizmente, o Android Q não existiu, pois o Google resolveu pôr fim a essa divertida prática e começou a usar numerações, o que deu origem ao Android 10.</p>
+                <p>Acesse aqui o site <a href="#">Android History</a> para conhecer a sequência das versões "adocicadas" e o que cada uma trouxe para o sistema Android</p>
+            </article>
+        </div>
+     
    </main>
+
    <footer>
-       <p>Site desenvolvido por Eduardo Fonseca da Silva em atividade do CursoemVideo com informações fornecidas no curso</p>
+       <p>Site desenvolvido em atividade do CursoemVideo </p>
    </footer>
 </body>
 </html>
