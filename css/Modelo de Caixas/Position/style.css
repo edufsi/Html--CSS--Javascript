@@ -1,0 +1,64 @@
+
+
+body{
+    height: 300vw; /* vw = view height
+    1 vw = 1/100 da altura total da página.
+    Assim, nesse caso estamos triplicando o tamanho da página*/
+}
+
+
+.container {
+    
+    
+    /*top, bottom, left e right não afetam um elemento com position: static */
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    border: 1px solid black
+
+    
+}
+
+.caixa {
+    position: static;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: 1px solid black;
+
+}
+
+.static {
+    position: static;
+    top: 20px;
+}
+
+.fixed {
+    background-color: transparent;
+    
+    top: 0;
+    right: 1vw;
+    
+    position: fixed;
+    
+    
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    
+    float: right
+}
+
+.relative {
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+}
+
+.absolute {
+    position: absolute;
+    right: 16.6%
+}

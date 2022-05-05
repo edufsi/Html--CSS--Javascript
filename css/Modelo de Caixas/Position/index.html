@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Position</h1>
+    <p>A position é uma propriedade CSS que define como um elemento qualquer pode ser posicionado no corpo do documento. Ela vem acompanhada de 4 outras propriedades: top, bottom, right e left, que vão determinar a localização final do objeto, deslocando o elemento conforme o especificado. No elemento abaixo, tentamos mover a div mãe colocando top: 20px, mas nada acon=teceu</p>
+    <h2>Tipos de Position</h2>
+    <p>Vamos com os exemplos:</p>
+    <h3>Static</h3>
+    <p>É a posição padrão. Ela não tem nada especial, ou seja, ela segue o fluxo da página.Por isso, ela não é afetada pelos elementos top, bottom, left, right.</p>
+    <div class="container static">
+        <p>Essa é a div mãe</p>
+        <div class="caixa static">
+            <p>Essa é a div filha</p>
+        </div>
+    </div>
+    
+    <h3>Fixed</h3>
+    <p>Um elemento com position: fixed faz o elemento ficar fixo na página, sem se importar com a scrollbar. Ele fica fixo porque é posicionado em relação à viewport, ou seja, à área visível para o usuário da página web.
+    <div class="container fixed">
+        <div class="caixa fixed">
+            <p>Essa caixa está com position fixed nesse canto da página.</p>
+        </div>
+
+    </div>
+    <h3>Sticky</h3>
+    <p>O elemento fica fixo na tela a partir do momento em que a barra de rolagem alcançá-lo.</p>
+    <p>Essa caixa vai se juntar na caixa do exemplo acima</p>
+    <div class="container sticky">
+        <div class="caixa sticky">
+
+        </div>
+    </div>
+    <h3>Relative</h3>
+    <p>Um elemento com position: relative o faz ficar posicionado em ralção à sua posição original. Ou seja, top, bottom, right e left deslocarão o elemento a partir da posição normal dele, a posição estática</p>
+    <div class="container relative">
+        <div class="caixa">
+    
+        </div>
+    </div>
+    <h3>Absolute</h3>
+    <p>Posicionado em relação ao elemento mais próximo dele que possui um position: relative. Esse elemento precisa estar dentro de uma hierarquia com um elemento com um position relative. Caso não esteja, o position: absolute será absoluto ao corpo da página.</p>
+    <div class="container relative">
+        <p>Esse container está com position: relative</p>
+        <div class="caixa absolute">
+            <p>Esse com position absolute. Logo, as informações de top, bottom, left e right que eu dar aqui não fazem referência ao corpo da página, mas sim ao elemento com posicionamento relativo que é pai desse elemento. Perceba que ele está com right: 16.6% em relação à div mãe</p>
+        </div>
+    </div>
+  
+</body>
+</html>
