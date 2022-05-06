@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid e Flex em CSS</title>
+    <style>
+        li {
+            margin: 10px;
+        }
+        .negrito {
+            font-weight: bold
+        }
+
+        div {
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align: center;
+            color: white;
+          
+        }
+        
+        
+        .container {
+            background: white;
+            max-width: 500px;
+       
+            margin: 0 auto;
+            border: 2px solid black
+        }
+
+        .Flex {
+            display: flex;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .row-reverse {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .column-reverse {
+            display: flex;
+            flex-direction: column-reverse
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Layout e Flexbox em CSS</h1>
+    <div class="container">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>06</div>
+        <div>05</div>
+    </div>
+    <p>O exemplo acima mostra divs dentro de uma div. Por padrão, as divs tem display: block, ou seja, elas ocupam toda o espaço de linha disponível</p>
+    <p>Veremos agora algumas manipulações no container que contém os itens utilizando dispaly flex.</p>
+    <div class="container Flex">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+    </div>
+    <p>Após colocado display:flex, perceba que os itens dentro da div se alinharam. Isso o corre porque o flex posiciona os itens sobre dois eixos: o eixo princiapal, que é o horizontal que aponta da esquerda para a direita, e o eixo cruzado, que é vertical e aponta de coma para baixo. Podemos inverter isso com a propriedade <span class="negrito">flex-direction</span>. Essa propriedade aceita:</p>
+    <ul>
+        <li>row: definido por padrão. Faz com que os blocos dentro docontainer se alinhem em uma linha da esquerda para a direita</li>
+
+    
+        <div class="container Flex">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li>column: troca o main axis de horizontal para a direita de modo que ele se torne o eixo vertical para baixo, alinhando os elementos em coluna</li>
+        <div class="container column">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li>row-reverse: faz o alinhamento horizontal ficar da direita para a esquerda</li>
+        <div class="container row-reverse">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li>column-reverse: faz o alinhamento vertical ficar de cima para baixo</li>
+        <div class="container column-reverse">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+    </ul>
+    <h2>Flex Wrap</h2>
+    <p>Define a quebra de linha de um container flexível: se será possível fazer quebra de linha ou não e como.</p>
+    <ul>
+        <li>No wrap: padrão. Não fará nenhuma quebra de linha.</li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
