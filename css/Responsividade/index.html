@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade</title>
+    <style>
+        @media only screen and (min-width: 900px) and (max-width: 1400px) {
+            .img-media-only {
+                width: 90%;
+            }
+        }
+        @media only screen and (max-width: 900px) {
+            .img-media-only {
+                display: none;
+                visibility: hidden
+            }
+        }
+
+    </style>
+   
+</head>
+<body>
+    <h1>Responsividade</h1>
+    <p>Observe a imagem a seguir:</p>
+    <img class="img-nao-responsiva" src="R.jpg" alt="Imagem de Paisagem">
+    <p>Agora, tente diminuir o tamanho da sua viewport.</p>
+    <p>Percebeu como a imagem não se adaptou ao tamanho da sua tela (isso se você ao menos conseguiu ver ela direito). Isso acontece porque ela não está responsiva, ou seja, ela não se adapta ao tamanho da tela</p>
+    <p>Para um site ter sucesso, é muito importante que ele possa ser visto em qualquer tipo de dispositivo e tamanhos de telas, ou seja, é preciso que ele seja um site responsivo. Para isso, podemos utilizar diversas técnicas.</p>
+    <h2>Utilizando @media only screen and</h2>
+    <p>Com as CSS, podemos verificar o tamanho da tela atual e estabelecer um limite máximo e um limite mínimo para algo escrevendo: @media only screen and (min-width: ?px) and (max-width: ?px)</p>
+    <p>Essa é uma boa opção caso queiramos retirar algo por completo do site caso a tela seja muito pequeno (ou muito grande)</p>
+    <img class="img-media-only" src="R.jpg" alt="img-media-only">
+    <p>Essa imagem foi configurada para desaparecer quando a largura da tela for menor que 900px. É bom lembrar, entretanto, que a imagem escondida também consome largura de banda, por isso não é recomendável o uso de imagens grandes, como as que foram usadas nesse exemplo.</p>
+</body>
+</html>
