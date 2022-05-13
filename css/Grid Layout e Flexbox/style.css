@@ -1,0 +1,162 @@
+li {
+    margin: 10px;
+}
+.negrito {
+    font-weight: bold
+}
+
+div {
+    margin: 5px;
+    padding: 5px;
+    background: #447;
+    text-align: center;
+    color: white;
+    
+}
+
+
+.container {
+    background: white;
+    max-width: 500px;
+    
+    margin: 0 auto;
+    border: 2px solid black
+}
+
+.Flex {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.column-reverse {
+    display: flex;
+    flex-direction: column-reverse
+}
+
+.nowrap {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90px;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90px
+}
+
+.wrap-reverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 90px;
+}
+
+.flex-flow_row-nowrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-flow_column-wrap {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100px;
+}
+
+.flex-flow_column-wrapreverse {
+    display: flex;
+    flex-flow: column wrap-reverse;
+    height: 100px;
+}
+
+.container > div:hover {
+    background-color: rgba(255, 0, 0, 0.838);
+    transition: 0.5s;
+}
+
+.flex-start_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.flex-start_row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stretch {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.align-items_center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.center {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.qua_blocos_linha {
+    width: calc(25% - 20px);
+    
+}
+
+.wrap_calc {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items_center {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    align-items: center;
+}
+
+.content_center {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    align-content: center;
+}
+
+.content_space_between {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    align-content: space-between;
+}
+
+

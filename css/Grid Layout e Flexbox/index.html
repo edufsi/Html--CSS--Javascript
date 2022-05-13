@@ -4,53 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Grid e Flex em CSS</title>
-    <style>
-        li {
-            margin: 10px;
-        }
-        .negrito {
-            font-weight: bold
-        }
-
-        div {
-            margin: 5px;
-            padding: 5px;
-            background: #447;
-            text-align: center;
-            color: white;
-          
-        }
-        
-        
-        .container {
-            background: white;
-            max-width: 500px;
-       
-            margin: 0 auto;
-            border: 2px solid black
-        }
-
-        .Flex {
-            display: flex;
-        }
-
-        .column {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .row-reverse {
-            display: flex;
-            flex-direction: row-reverse;
-        }
-
-        .column-reverse {
-            display: flex;
-            flex-direction: column-reverse
-        }
-    </style>
-</head>
+   </head>
 <body>
     <h1>Grid Layout e Flexbox em CSS</h1>
     <div class="container">
@@ -72,7 +28,8 @@
         <div>06</div>
         <div>07</div>
     </div>
-    <p>Após colocado display:flex, perceba que os itens dentro da div se alinharam. Isso o corre porque o flex posiciona os itens sobre dois eixos: o eixo princiapal, que é o horizontal que aponta da esquerda para a direita, e o eixo cruzado, que é vertical e aponta de coma para baixo. Podemos inverter isso com a propriedade <span class="negrito">flex-direction</span>. Essa propriedade aceita:</p>
+    <p>Após colocado display:flex, perceba que os itens dentro da div se alinharam. Isso o corre porque o flex posiciona os itens sobre dois eixos: o eixo princiapal, que é o horizontal que aponta da esquerda para a direita, e o eixo cruzado, que é vertical e aponta de coma para baixo. Podemos inverter isso com a propriedade flex-direction.</p>
+    <h2>Flex-Direction</h2>
     <ul>
         <li>row: definido por padrão. Faz com que os blocos dentro docontainer se alinhem em uma linha da esquerda para a direita</li>
 
@@ -120,9 +77,227 @@
     <h2>Flex Wrap</h2>
     <p>Define a quebra de linha de um container flexível: se será possível fazer quebra de linha ou não e como.</p>
     <ul>
-        <li>No wrap: padrão. Não fará nenhuma quebra de linha.</li>
-        <li></li>
-        <li></li>
+        <li>nowrap: padrão. Não fará nenhuma quebra de linha.</li>
+        <div class="container nowrap">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li>wrap: quebra de linha. Todos os elementos que não couberem na div passarão para as próximas linhas</li>
+        <div class="container wrap">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li>wrap-reverse: faz a quebra de linhas invertidas, invertendo a ordem de distribuição dos elementos.</li>
+        <div class="container wrap-reverse">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
     </ul>
+    <h2>Flex-flow</h2>
+    <p>Junta flex-direction e flex-wrap em uma única propriedade. </p>
+    <p>Funciona assim: <span class="negrito">flex-flow: flex-direction flex-wrap</span></p>
+    <ul>
+        <li><span class="negrito">flex-flow: row nowrap</span> (padrão)</li>
+        <div class="container flex-flow_row-nowrap">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li><span class="negrito">flex-flow: column wrap</span> (mesmo efeito de flex-direction column, uma vez que para separar os elementos em colunas linhas já são quebradas</li>
+        <div class="container flex-flow_column-wrap">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li><span class="negrito">flex-flow: column wrap-reverse</span></li>
+        <div class="container flex-flow_column-wrapreverse">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+    </ul>
+    <h2>Justify Content</h2>
+    <p>Define o alinhamento dos itens de acordo com o eixo principal, ou seja, depende do flex-direction</p>
+    <ul>
+        <li><span class="negrito">flex-start: </span>alinha ao início do eixo principal. Se temos que o eixo principal é o horizontal e ele vai da esquerda para a direita (padrão), então flex-start colocará os itens à esquerda. Agora, se tivermos com flex-direction: row-reverse, o eixo principal será o horizontal da direita para a esquerda, o que significa que os elementos serão colocados à direita.</li>
+        <ul>
+            <li>flex-start com flex-direction: row</li>
+            <div class="container flex-start_row">
+                <div>01</div>
+                <div>02</div>
+                <div>03</div>
+                <div>04</div>
+                <div>05</div>
+                <div>06</div>
+                <div>07</div>
+            </div>
+            <li>flex-start com flex-direction: row-reverse</li>
+            <div class="container flex-start_row-reverse">
+                <div>01</div>
+                <div>02</div>
+                <div>03</div>
+                <div>04</div>
+                <div>05</div>
+                <div>06</div>
+                <div>07</div>
+            </div>
+        </ul>
+        <li><span class="negrito">flex-end:</span> deixa os itens no final do eixo principal</li>
+        <li><span class="negrito">center:</span> deixa os itens no centro do eixo principal</li>
+        <li><span class="negrito">space-between:</span> coloca o primeiro elemento no flex-start e o último no flex-end, espaçando-os de forma igual</li>
+        <div class="container space-between">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li><span class="negrito">space-around:</span> espaça os elementos de forma igual dentro do container sem grudar elementos no começo ou fim do eixo principal</li>
+        <div class="container space-around">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+    </ul>
+    <h2>Align-items</h2>
+    <p>Define o alinhamento de itens de acordo com o eixo secundário</p>
+    <ul>
+        <li>stretch: os elementos se esticam para todos terem a mesma altura na div (padrão) </li>
+        <div class="container stretch">
+            <div>01
+                <p>a</p>
+              
+            </div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li>flex-start: alinhamento no início do eixo secundário</li>
+        <li>flex-end: alinhamento no final do eixo secundário</li>
+        <li>center: alinhamento no centro do eixo secundário</li>
+        <div class="container align-items_center">
+            <div>01
+                <p>a</p>
+              
+            </div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+            <div>07</div>
+        </div>
+        <li>EXEMPLO DE ALIGN-ITEMS E JUSTIFY-CONTENT:</li>
+        <div class="container center">
+            <div>todos os elementos</div>
+            <div>estarão no centro da div</div>
+            <div>pois estamos usando</div>
+            <div>justify-content: center</div>
+            <div>o que coloca os elementos no centro do eixo principal</div>
+            <div>e align-items: center</div>
+            <div>o que coloca os elementos no centro do eixo secundário</div>
+        </div>
+        <li>baseline: linha base. Muda de acordo com a propriedade baseline do elemento.
+        </li>
+        <h2>Bônus: calc</h2>
+        <p>Podemos inserir um cálculo como elemento das CSS com calc. Isso é muito útil, por exemplo, quando queremos alinhar um dado número </p>
+        <p>Digamos que queremos alinhar 4 itens por linha considerando as margens e os acolchoamentos</p>
+        <p>Se temos um acolchoamento de 5 px e uma margem de 5 px, para cada lado temos 10px. Assim:/p>
+        <p>calc(25% - 20px) será o tamanho de cada bloco dentro da div, assim:</p>
+        <div class="container wrap_calc">
+            <div class="qua_blocos_linha">01</div>
+            <div class="qua_blocos_linha">02</div>
+            <div class="qua_blocos_linha">03</div>
+            <div class="qua_blocos_linha">04</div>
+            <div class="qua_blocos_linha">05</div>
+            <div class="qua_blocos_linha">06</div>
+            <div class="qua_blocos_linha">07</div>
+            <div class="qua_blocos_linha">08</div>
+            <div class="qua_blocos_linha">09</div>
+            <div class="qua_blocos_linha">10</div>
+            <div class="qua_blocos_linha">11</div>
+            <div class="qua_blocos_linha">12</div>
+            <div class="qua_blocos_linha">13</div>
+            <div class="qua_blocos_linha">14</div>
+        </div>
+    </ul>
+    <h2>Align-content</h2>
+    <p>Tem um funcionamento muito parecido com align items, pois também toma como referência o eixo secundário para alinhar as coisas. No entanto, align-items dá espaçamento igual aos itens automaticamente, enquanto align-content não. O exemplo a seguir foi feito usando align-items: center</p>
+    <div class="container items_center">
+        <div class="qua_blocos_linha">01</div>
+        <div class="qua_blocos_linha">02</div>
+        <div class="qua_blocos_linha">03</div>
+        <div class="qua_blocos_linha">04</div>
+        <div class="qua_blocos_linha">05</div>
+        <div class="qua_blocos_linha">06</div>
+    </div>
+    <p>O próximo foi feito com align-content</p>
+    <div class="container content_center">
+        <div class="qua_blocos_linha">01</div>
+        <div class="qua_blocos_linha">02</div>
+        <div class="qua_blocos_linha">03</div>
+        <div class="qua_blocos_linha">04</div>
+        <div class="qua_blocos_linha">05</div>
+        <div class="qua_blocos_linha">06</div>
+    </div>
+    <p>Align-content aceita:</p>
+    <ul>
+        <li>flex-end, flex-start, center, stretch, todos os elementos que align-items aceita</li>
+        <li>space-around: comportamento idêntico ao align-items: center. Separará os elementos por espaços iguais, centralizando-os no eixo secundário</li>
+        <li>space-between: também distribui os elementos no centro do eixo secundário, porém gruda elementos no flex-start e no flex-end </li>
+    </ul>
+    <div class="container content_space_between">
+        <div class="qua_blocos_linha">01</div>
+        <div class="qua_blocos_linha">02</div>
+        <div class="qua_blocos_linha">03</div>
+        <div class="qua_blocos_linha">04</div>
+        <div class="qua_blocos_linha">05</div>
+        <div class="qua_blocos_linha">06</div>
+        <div class="qua_blocos_linha">07</div>
+        <div class="qua_blocos_linha">08</div>
+        <div class="qua_blocos_linha">09</div>
+        <div class="qua_blocos_linha">10</div>
+        <div class="qua_blocos_linha">11</div>
+        <div class="qua_blocos_linha">12</div>
+        <div class="qua_blocos_linha">13</div>
+        <div class="qua_blocos_linha">14</div>
+    </div>
+</div>
 </body>
 </html>
