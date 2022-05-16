@@ -8,7 +8,7 @@
     <title>Grid e Flex em CSS</title>
    </head>
 <body>
-    <h1>Grid Layout e Flexbox em CSS</h1>
+    <h1 style="text-align: center">Flexbox em CSS</h1>
     <div class="div_inicial">
         <div>01</div>
         <div>02</div>
@@ -340,6 +340,45 @@
     <div class="qua_blocos_linha" style="order: 11">11</div>
     <div class="qua_blocos_linha" style="order: 6">12</div>
 </div>
+<h2>Flex-shrink</h2>
+<p>Indica a capacidade de um elemento de se encolher para caber dentro de um espaço. Aceita valores >= 0, sendo 0 a total incapacidade de se encolher:</p>
+<p>Os itens da div a seguir apresentam flex-shrink: 1, ou seja, podem se encolher, e width: 180px</p>
+<div class="container" style="margin-bottom: 15px">
+    <div class="shrink">01</div>
+    <div class="shrink">02</div>
+    <div class="shrink">03</div>
+</div>
+<p>Já essa div apresenta itens com flex-shrink: 0, ou seja, que não podem se encolher, e width: 180px também</p>
+<div class="container">
+    <div class="no_shrink">01</div>
+    <div class="no_shrink">02</div>
+    <div class="no_shrink">03</div>
 
+</div>
+<p>Para demonstrar o flex-shrink quando o valor é > 1, temos esses exemplos:</p>
+<p>Flex shrink: 2</p>
+<div class="container">
+    <div class="no_shrink">AAAAAAAAAAA AAA</div>
+    <div class="shrink2">BBBB BB BBBBBB B BBB</div>
+    <div class="no_shrink">CCCCCC CCCCCCCCCCC CC C</div>
+</div>
+<p>Flex-shrink: 3</p>
+<div class="container">
+    <div class="no_shrink">AAAAAAAAAAAA AAA</div>
+    <div class="shrink3">BBBB BB BBBBBB B BBB</div>
+    <div class="no_shrink">CCCCCC CCCCCCCCCCC CC C</div>
+</div>
+<h2>Flex</h2>
+<p>Short-hand para: flex-grow (valor padrão 0), flex-shrink (valor padrão 1), flex-basis (valor padrão auto).</p>
+<h2>Align-Self</h2>
+<p>Alinha o próprio elemento de acordo com o eixo secundário atual.</p>
+<p>Exemplo:</p>
+<p>Como o flex-direction padrão é row, o eixo secundário será a coluna</p>
+<p>A div mãe tem align-items: space-between, enquanto cada um dos elemento tem um align-self diferente: o primeiro está no início do eixo, o segundo está no centro e o terceiro no fim.</p>
+<div class="container space-between" style="height: 400px">
+    <div class="align_self_start">01</div>
+    <div class="align_self_center">02</div>
+    <div class="align_self_end">03</div>
+</div>
 </body>
 </html>

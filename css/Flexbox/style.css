@@ -194,3 +194,35 @@ div {
 .base3 {
     flex-basis: 2;
 }
+
+.no_shrink {
+    flex-shrink: 0;
+    width: 195px;
+}
+
+.shrink {
+    flex-shrink: 1;
+    width: 180px;
+}
+
+.shrink2 {
+    flex-shrink: 2;
+    width: 180px;
+}
+
+.shrink3 {
+    flex-shrink: 3;
+    width: 180px;
+}
+
+.align_self_center {
+    align-self: center;
+}
+
+.align_self_start {
+    align-self: flex-start;
+}
+
+.align_self_end {
+    align-self: flex-end;
+}
