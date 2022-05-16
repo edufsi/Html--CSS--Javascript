@@ -9,7 +9,7 @@
    </head>
 <body>
     <h1>Grid Layout e Flexbox em CSS</h1>
-    <div class="container">
+    <div class="div_inicial">
         <div>01</div>
         <div>02</div>
         <div>03</div>
@@ -299,5 +299,47 @@
         <div class="qua_blocos_linha">14</div>
     </div>
 </div>
+<h2>Flex-grow</h2>
+<p>Aplica a propriedade DO ITEM de aumentar ou não em relaçõa ao container.</p>
+<p>Por padrão, o tamanho de um item é ajustado ao seu conteúdo.</p>
+<p>Esse padrão é o flex-grow: 0</p>
+<p>No exemplo a seguir, os números 1,2 tem flex-grow: 0; os itens 3,4 tem flex-grow: 1; e os itens 5,6 tem lex-grow: 3;</p>
+<div class="container">
+    <div class="tam1">01</div>
+    <div class="tam1">02</div>
+    <div class="tam2">3</div>
+    <div class="tam2">04</div>
+    <div class="tam3">05</div>
+    <div class="tam3">06</div>
+</div>
+<p>Perceba que os elementos se adaptam para ocupar a linha inteira: os elementos que receberam maiores flex-grow vão se adaptando para ficarem maiores. Uma observação importante também é que justify-content: center não irá alterar nada, pois flex-grow já se adapta para a linha inteira.</p>
+<h2>Flex-basis</h2>
+<p>Usamos flex-basis para forçar um elemento a ter um tamanho, sem depender do conteúdo.</p>
+<div class="container">
+    <div class="tam3 base0">Um dois</div>
+    <div class="tam3 base0">Tres quatro</div>
+    <div class="tam3 base0">Cinco seis sete oito nove e dez</div>
+    <div class="tam3 base0">Isso acontece porque estamos usando o mesmo flex - basis e flex - grow para todos os itens da div...</div>
+    <div class="tam3 base0">...o que faz todos os itens terem forçadamente o mesmo tamanho na linha, a não ser que seja impossível quebrar a linha...</div>
+    <div class="tam3 base0">então a div que contém esse conteúdo se estenderá.</div>
+</div>
+<h2>Order</h2>
+<p>Estabelece a prioridade ou a ordem de distribuição dos elementos no eixo principal, que é indicada de forma crescente (o elemento com order: 0 será posicionado antes do elemento com order: 1, o elemento com order: -1 será posicionado antes do elemento com order: 0...)</p>
+<p>A div a seguir teve sua ordem mudada com ORDER.</p>
+<div class="container wrap_calc">
+    <div class="qua_blocos_linha" style="order: 0">01</div>
+    <div class="qua_blocos_linha" style="order: 2">02</div>
+    <div class="qua_blocos_linha" style="order: 10">03</div>
+    <div class="qua_blocos_linha" style="order: 5">04</div>
+    <div class="qua_blocos_linha" style="order: 9">05</div>
+    <div class="qua_blocos_linha" style="order: 8">06</div>
+    <div class="qua_blocos_linha" style="order: 1">07</div>
+    <div class="qua_blocos_linha" style="order: 4">08</div>
+    <div class="qua_blocos_linha" style="order: 7">09</div>
+    <div class="qua_blocos_linha" style="order: 3">10</div>
+    <div class="qua_blocos_linha" style="order: 11">11</div>
+    <div class="qua_blocos_linha" style="order: 6">12</div>
+</div>
+
 </body>
 </html>

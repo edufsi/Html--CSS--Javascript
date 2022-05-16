@@ -5,6 +5,14 @@ li {
     font-weight: bold
 }
 
+.div_inicial {
+    display: block;
+    border: 2px solid black;
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+}
+
 div {
     margin: 5px;
     padding: 5px;
@@ -18,7 +26,7 @@ div {
 .container {
     background: white;
     max-width: 500px;
-    
+    display: flex;
     margin: 0 auto;
     border: 2px solid black
 }
@@ -160,3 +168,29 @@ div {
 }
 
 
+.tam0 {
+    flex-grow: 0;
+    
+}
+
+.tam2 {
+    flex-grow: 1;
+    
+}
+
+.tam3 {
+    flex-grow: 3;
+    
+}
+
+.base0 {
+    flex-basis: 0;
+}
+
+.base2 {
+    flex-basis: 1;
+}
+
+.base3 {
+    flex-basis: 2;
+}
