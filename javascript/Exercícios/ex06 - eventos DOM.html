@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div.c {
+            border: 5px solid black;
+            width: 15vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5vw;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Eventos DOM</h1>
+    <div class="c" onclick="clicar()" onmouseout="saiu()">
+        Interaja
+    </div>
+    <script>
+        var caixa = window.document.querySelector('div.c')
+        // Poderíamos, ao invés de colocar diretamente na div a chamada para as funções, colocar na variável um EventListener para "monitorar" quando dado evento acontecesse
+        //Aqui, por exemplo, colocaríamos um caixa.addEventListener('click', clicar)
+        caixa.addEventListener('mouseenter', entrou)
+        function clicar() {
+
+            caixa.style.background = 'blue'
+            caixa.innerHTML = 'CLICOU'
+        }
+        function entrou() {
+            
+            caixa.innerHTML = 'ENTROU'
+            caixa.style.background = 'red'
+        }
+        function saiu() {
+            caixa.innerHTML = 'SAIU'
+            caixa.style.background = 'yellow'
+        }
+        
+    
+    </script>
+</body>
+</html>
