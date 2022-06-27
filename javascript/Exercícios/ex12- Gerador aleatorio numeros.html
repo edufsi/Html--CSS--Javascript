@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de números aleatórios</title>
+    <style>
+        span {
+            font-weight: bold;
+            color: red;
+        }
+        div {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador aleatório de números</h1>
+    <h2>Método Math.random()</h2>
+    <p>Esse método gera um número aleatório ente 0 e 1. Para fazer um gerador de números aleatórios com outros números, devemos multiplicar o valor obtido por um número (o número máximo do intervalo do qual queremos tirar um número aleatoriamente. Se estivermos falando de um intevalo de números inteiros, é preciso arredondar o valor com Math.floor. Para gerar um intervalo diferente de 0 até o número pelo qual estamos multipicando Math.random, devemos somar o valor que queremos como mínimo. Assim, a fórmula fica asssim:</p>
+    <span>
+        <p>Math.floor(Math.random() * o número máximo que você quer no intervalo) + o número mínimo que você quer no intervalo</p>
+    </span>
+    <div>
+        <button type="button" onclick= rolard4()>Role um d4</button>
+        <label class="d4"> </label>
+
+    </div>
+    <div>
+        <button type="button" onclick= rolard6()>Role um d6</button>
+        <label class="d6" > </label>
+    </div>
+    <div>
+        <button type="button" onclick= rolard8()>Role um d8</button>
+        <label class="d8"> </label>
+    </div>
+    <div>
+        <button type="button" onclick= rolard10()>Role um d10</button>
+        <label class="d10" > </label>
+    </div>
+    <div>
+        <button type="button" onclick= rolard12()>Role um d12</button>
+        <label class="d12" > </label>
+    </div>
+    <div>
+        <button type="button" onclick= rolard20()>Role um d20</button>
+        <label class="d20" > </label>
+    </div>
+
+    <script>
+        function rolard4() {
+            let a = document.querySelector(".d4")
+            a.innerHTML = Math.floor(Math.random() * 4) + 1
+        }
+
+        function rolard6() {
+            let b = document.querySelector(".d6")
+            b.innerHTML = Math.floor(Math.random() * 6) + 1
+        }
+
+        function rolard8() {
+            let c = document.querySelector(".d8")
+            c.innerHTML = Math.floor(Math.random() * 8) + 1
+        }
+
+        function rolard10() {
+            let d = document.querySelector(".d10")
+            d.innerHTML = Math.floor(Math.random() * 10) + 1
+        }
+
+        function rolard12() {
+            let e = document.querySelector(".d12")
+            e.innerHTML = Math.floor(Math.random() * 12) + 1
+        }
+
+        function rolard20() {
+            let f = document.querySelector(".d20")
+            f.innerHTML = Math.floor(Math.random() * 20) + 1
+        }
+    </script>
+</body>
+</html>
