@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipotenusa</title>
+    <style>
+        div {
+            padding: 8px;
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <label>Digite um valor para o lado a:</label>
+        <input class= "cateto" type="number">
+        <button onclick= definirA() type="button">Clique para submeter o valor</button>
+    </div>
+    <div>
+        <label cla>Digite um valor para o lado b:</label>
+        <input class="cateto" type="number">
+        <button onclick= definirB() type="button">Clique para submeter o valor</button>
+        <script> 
+            let checagem;
+            var a = 0; //LET E VAR: var tem escopo global, let não
+            var b = 0;
+            function definirA() {
+                a = document.getElementsByClassName("cateto")[0].value;
+                if(a != 0 && b!= 0) {
+                    console.log(`A hipotenusa mede ${Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))}`)
+                }
+            }
+            function definirB() {
+                 b = document.getElementsByClassName("cateto")[1].value;
+                 if(a != 0 && b != 0) {
+                    console.log(`A hipotenusa mede ${Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))}`)
+                 }
+            }
+            
+
+        </script>
+    </div>
+
+
+</body>
+</html>
