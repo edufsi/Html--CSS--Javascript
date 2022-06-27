@@ -23,26 +23,31 @@
         <label cla>Digite um valor para o lado b:</label>
         <input class="cateto" type="number">
         <button onclick= definirB() type="button">Clique para submeter o valor</button>
-        <script> 
-            let checagem;
-            var a = 0; //LET E VAR: var tem escopo global, let não
-            var b = 0;
-            function definirA() {
-                a = document.getElementsByClassName("cateto")[0].value;
-                if(a != 0 && b!= 0) {
-                    console.log(`A hipotenusa mede ${Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))}`)
-                }
-            }
-            function definirB() {
-                 b = document.getElementsByClassName("cateto")[1].value;
-                 if(a != 0 && b != 0) {
-                    console.log(`A hipotenusa mede ${Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))}`)
-                 }
-            }
-            
-
-        </script>
     </div>
+        <label id="valorC" style="padding: 8px">O valor da hipotenusa é: </label>
+    <script> 
+        var a = 0; //LET E VAR: var tem escopo global, let não
+        var b = 0;
+        var c;
+        function definirA() {
+            a = document.getElementsByClassName("cateto")[0].value;
+            if(a != 0 && b!= 0) {
+                c = document.getElementById("valorC")
+                c.innerHTML = `O valor da hipotenusa é: ${Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))}`
+                console.log(c)
+            }
+        }
+        function definirB() {
+            b = document.getElementsByClassName("cateto")[1].value;
+            if(a != 0 && b != 0) {
+                c = document.getElementById("valorC")
+                c.innerHTML = `O valor da hipotenusa é: ${Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))}`
+                
+            }
+        }
+        
+
+    </script>
 
 
 </body>
