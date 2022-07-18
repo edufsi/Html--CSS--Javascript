@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Compostas</title>
+    <script src=""></script>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        p {
+            padding: 5px;
+        }
+        .exemplo {
+            font-family: monospace;
+           
+            
+        }
+
+        .borda {
+            border: 2px solid black;
+            padding: 10px;
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Variáveis Compostas</h1>
+    <p>Variáveis compostas/ vetores/ arrays são variáveis que possuem vários elementos. Cada elemento é composto por seu valor e por uma chave de identificação.</p>
+    <h2>Listas</h2>
+    <p>Para fazer uma lista, basta usar colchetes [] ao declarar a variável</p>
+    <div class="borda">
+        <p class="exemplo">var a = []</p>
+        <p class="exemplo">let a = [231, 346, 1, 987]
+    </div>
+
+    <h3>Adicionando valores</h3>
+    <p>Podemos fazer isso atribuindo diretamente um valor à variável, desse jeito:</p>
+    <p>let b = [10, 20, 30]</p>
+    <p>b[3] = 40</p>
+    <p>b passará a ser [10, 20, 30, 40]</p>
+    Também podemos fazer isso com o método PUSH, que insere um valor novo à última posição da lista. 
+    let b = [10, 20, 30]
+    b.push(40)
+    b passará a ser [10, 20, 30, 40]
+    <h3>length</h3>
+    <p>O atributo length retornará o número de elementos em uma lista</p>
+    <p>let b = [10, 20, 30, 40]</p>
+    <p>b.length retornará o valor 4</p>
+    <h3>sort</h3>
+    <p>Método que ordena todos os valores numéricos em ordem crescente ou todos os valores string em ordem alfabética. </p>
+    <h3>indexOf</h3>
+    <p>método de listas que toma como parâmetro um valor e retorna o índice da primeira ocorrência desse valor. Caso não haja ocorrência do valor dado no vetor, retorna -1</p>
+    <p>a = [1, 2, 3, 4, 5]</p>
+    <p>a.indexOf(1) -> 0</p>
+    <p>a.indexOf(2) -> 1</p>
+    <p>a.indexOf(4) -> 3 </p>
+    <p>a.indexOf(38) -> -1</p>
+    
+    
+
+</body>
