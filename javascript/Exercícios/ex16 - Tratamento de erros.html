@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tratamento de erros em Javascript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Tratamento de erros</h1>
+    <p>Erros são objetos com uma descrição de algo que deu errado. São chamados de exceções.</p>
+    <h2>TRY ... CATCH ... FINALLY</h2>
+    <p>Para lidar com erros em Javascript, uma das formas é usando try ... catch. </p>
+    <p>O bloco try tenta ser executado.</p>
+    <p>Caso alguma exceção seja lançada no bloco try, o bloco catch será executado. Catch pode ou não estar associado a uma exceção, ou seja, podemos criar vários blocos catch para diferentes exceções.  </p>
+    <p>Finally será executado, independentemente do resultado.</p>
+    <code>
+        <pre>
+try {
+    // Qualquer coisa
+}
+        
+// Se o erro1 acontecer:
+
+catch(erro1) {
+    console.log(erro1)
+}
+        
+//Se o erro2 acontecer:
+
+catch(erro2) {
+    console.log(erro2)
+}
+        
+//Se qualquer outro erro acontecer:
+
+catch {
+    console.log('ERRO')
+}
+
+finally {
+    //Qualquer coisa 
+}
+        </pre>
+    </code>
+
+    <h2>TROW</h2>
+    <p>Levanta uma exceção customizada.</p>
+    <p>Digamos, por exemplo, que queremos que um usuário digite um número:</p>
+<pre>
+try {
+    let x = window.prompt('Digite um número')
+    if (isNaN(x)) {
+        throw `${x} não é um número`
+    }
+    
+    if (x == '') trow `O usuário não digitou nada`
+}
+catch(erro) {
+    console.log(erro)
+}
+</pre>
+<p>Se o usuário não digitar um número, estamos levantando uma exceção e escrevendo ela.</p>
+</body>
+</html>

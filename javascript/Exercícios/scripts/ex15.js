@@ -33,7 +33,20 @@ function fibbonaci(n) {
     return sequencia
 }
 
-let a = fibbonaci(100)
-console.log(a)
+function soma(array) {
+    let total = 0
+
+    for(var i in array) {
+        total += array[i]
+    }
+    
+    // O CÓDIGO ACIMA TEM O EXATO MESMO RESULTADO QUE: 
+    // for (var i = 0; i < array.length; i++) {
+    //  total += array[i]
+    //}
+    
+    return total
+}
+
 
 
